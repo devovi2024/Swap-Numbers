@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Value</title>
+    
+
+
+    <style>
+        .swap{
+            background-color: cornflowerblue;
+            border-radius: 10px;
+            height: 100vh;
+        }
+        .swap2{
+            /* background-color: bisque; */
+            background-color: #788ea5;
+            padding: 4vh;
+        }
+        .swap3{
+            padding-left: 4vh;
+        }
+        .input-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .input-grid:nth-child(2) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 4vh;
+        }
+        input {
+            height: 10vh;
+            margin-left: 6vh;
+          
+            background-color: rgb(22, 171, 121);
+   
+    width: 115px; /* Adjust width as needed */
+    box-sizing: border-box;
+    color: rgb(38, 28, 28);
+    font-size:large;
+}
+.inputs{
+
+}
+.button-container {
+
+    
+}
+button {
+    padding: 10px 20px;
+    margin-left: 40%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+            .input-grid {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+                margin-left: 0;
+            }
+
+            .input-grid:nth-child(2) {
+                grid-template-columns: 1fr;
+            }
+
+            input {
+                margin-left: 20%;
+                width: 50%;
+            }
+
+            button {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .swap2 {
+                padding: 2vh;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            #result {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        }
+
+
+        @media (min-width: 601px) {
+            .input-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            input {
+                height: 10vh;
+                width: 40vh;
+        /* Adjust width as needed */
+                margin-left: 0;
+            }
+
+            button {
+                margin-left: 40%;
+                width: auto;
+            }
+            .result{
+                margin-top: 20px;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="swap">
+        <div class="swap2">
+            <div class="swap3">
+                <h1>My Javascript Program Value Swapper</h1>
+        <p>Process: <br>
+            1. Create Function 
+            <br>
+            2. html 5 input fields <br>
+            3. and adding <b>button</b> by javascript function. <br>
+            4. define javascript value or <i><strong style="text-align: center;">variable</strong></i> 1,2,3,4,5 [<span><i>input </i></span>]
+            
+        </p>
+    </div>
+        <div id="inputs">
+           <div class="input-grid">
+            <input type="text" name="" placeholder="Enter Value" id="input1">
+            <input type="text" name="" placeholder="Enter Value" id="input2">
+            
+            <input type="text" name="" placeholder="Enter Value" id="input3">
+           </div>
+                <div class="input-grid">
+                    <input type="text" name="" placeholder="Enter Value" id="input4">
+                    <input type="text" name="" placeholder="Enter Value" id="input5">
+                </div>
+        </div>
+
+        <button onclick="swapValues()">
+            Swap Values
+        </button>
+
+        <p id="myInputs" style="  margin-left: 40%;font-size: 3vh;">Your Input Values</p>
+        <!-- Swapped -->
+        <p style="  margin-left: 40%;" id="result"></p>
+        </div>
+    </div>
+
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
